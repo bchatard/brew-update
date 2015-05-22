@@ -69,7 +69,7 @@ update()
 upgrade()
 {
     echo -e "Upgrade brew"
-    brew upgrade
+    brew upgrade --all
     echo -e "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 }
 
@@ -91,8 +91,8 @@ upgradeBrewCask()
 clean()
 {
     echo -e "Cleanup"
-    brew cleanup
-    brew cask cleanup
+    brew cleanup --prune=10 # follow brew cask logic
+    brew cask cleanup --outdated
     echo -e "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     echo -e "Prune formulae"
     brew prune
