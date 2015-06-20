@@ -6,6 +6,8 @@ Update brew and brew casks
 ## Requirements
 1. [Homebrew](https://github.com/Homebrew/homebrew)
 2. [Homebrew Cask](https://github.com/caskroom/homebrew-cask)
+3. Install grep via brew (`brew install grep --with-default-names`)
+4. Install gnu-sed via brew (`brew install gnu-sed --with-default-names`)
 
 ## Installation
 1. Clone somewhere
