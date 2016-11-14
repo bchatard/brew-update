@@ -1,6 +1,8 @@
 #!/bin/bash
 
-HOMEBREW_CASK_DIR="/opt/homebrew-cask/Caskroom/"
+#HOMEBREW_CASK_DIR="/opt/homebrew-cask/Caskroom/"
+HOMEBREW_CASK_DIR="/usr/local/Caskroom/"
+#HOMEBREW_CASK_DIR=$(brew --prefix)/Caskroom
 TEXT_RESET="\033[0m"
 TEXT_GREEN="\033[0;32m"
 TEXT_RED="\033[0;31m"
@@ -35,7 +37,7 @@ _processCask()
 _upgradeCask()
 {
     cask=$1
-    brew cask install ${cask}
+    brew cask install ${cask} --force
 }
 
 _removeOldVersions()
@@ -69,7 +71,7 @@ update()
 upgrade()
 {
     echo -e "Upgrade brew"
-    brew upgrade --all
+    brew upgrade
     echo -e "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 }
 
